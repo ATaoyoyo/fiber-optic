@@ -1,0 +1,51 @@
+.layout {
+	height: 100vh;
+	overflow: hidden;
+
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 10px;
+		.logo-bg {
+			width: 24px;
+			height: 24px;
+			background-image: url("@/assets/images/logo.png");
+			background-size: 100%;
+		}
+		.title {
+			// margin-left: 10px;
+			width: 100%;
+			height: 30px;
+			background-color: #f1f1f1;
+			border-radius: 12px;
+		}
+	}
+
+	.arco-layout-header {
+		padding: 0 10px;
+		height: 48px;
+		line-height: 48px;
+		background: var(--color-bg-3);
+	}
+
+	.arco-layout {
+		.content {
+			padding: 10px;
+			background: var(--color-neutral-1);
+		}
+
+		.arco-layout-content {
+			color: var(--color-white);
+			text-align: center;
+			font-stretch: condensed;
+			font-size: 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background: var(--color-bg-3);
+			color: var(--color-text-2);
+			font-weight: 400;
+		}
+	}
+}
