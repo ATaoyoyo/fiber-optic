@@ -1,0 +1,76 @@
+.order-source {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 18px;
+	height: 96px;
+
+	&-item {
+		display: flex;
+		align-items: center;
+		// justify-content: center;
+		width: 240px;
+		// background: linear-gradient(10deg, #ffffff 0%, #ebf3ff 100%);
+		box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+		border-radius: 5px 5px 5px 5px;
+
+		&.add {
+			color: #4a95ff;
+			background: linear-gradient(10deg, #ffffff 0%, #ebf3ff 100%);
+
+			.icon {
+				background-image: url("@/assets/images/home/add.png");
+			}
+		}
+		&.deal {
+			color: #ffae4a;
+			background: linear-gradient(10deg, #ffffff 0%, #fff8f0 100%);
+			.icon {
+				background-image: url("@/assets/images/home/deal.png");
+			}
+		}
+		&.count {
+			color: #31cfe1;
+			background: linear-gradient(10deg, #ffffff 0%, #f0fbff 100%);
+			.icon {
+				background-image: url("@/assets/images/home/count.png");
+			}
+		}
+		&.line {
+			color: #53e17d;
+			background: linear-gradient(10deg, #ffffff 0%, #f1fff6 100%);
+			.icon {
+				background-image: url("@/assets/images/home/line.png");
+			}
+		}
+		&.work {
+			color: #e45748;
+			background: linear-gradient(10deg, #ffffff 0%, #fff0f3 100%);
+			.icon {
+				background-image: url("@/assets/images/home/work.png");
+			}
+		}
+
+		.icon {
+			margin: 0 20px 0 30px;
+			width: 48px;
+			height: 48px;
+			// background-color: var(--color-neutral-2);
+			background-size: 48px 48px;
+		}
+
+		.number {
+			text-align: left;
+			.value {
+				font-weight: 700;
+				font-size: 24px;
+				// color: #4a95ff;
+			}
+		}
+
+		.desc {
+			font-weight: 400;
+			font-size: 14px;
+			color: #666666;
+		}
+	}
+}

@@ -1,0 +1,120 @@
+.work-order {
+	.work-order-panel {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		padding: 0 19px;
+		height: 50px;
+		background: linear-gradient(
+			90deg,
+			rgba(222, 31, 31, 0.15) 0%,
+			rgba(222, 31, 31, 0.1) 100%
+		);
+		border-radius: 5px 5px 5px 5px;
+		border: 1px solid rgba(222, 31, 31, 0.3);
+		cursor: pointer;
+
+		&.deal {
+			background: linear-gradient(
+				90deg,
+				rgba(232, 181, 125, 0.3) 0%,
+				rgba(232, 181, 125, 0.15) 100%
+			);
+			border: 1px solid #ea9a39;
+		}
+
+		.icon-title {
+			.title {
+				padding-left: 9px;
+				font-weight: 400;
+				font-size: 14px;
+				color: #ff3f1e;
+				line-height: 14px;
+			}
+		}
+
+		.count-arrow {
+			display: flex;
+			align-items: center;
+
+			.count {
+				margin-right: 16px;
+				width: 27px;
+				height: 16px;
+				font-weight: 500;
+				font-size: 10px;
+				color: #ffffff;
+				line-height: 16px;
+				background: #ff3f1e;
+				border-radius: 8px 8px 8px 8px;
+
+				&.deal {
+					background: #ea9a39;
+				}
+			}
+		}
+	}
+
+	.work-order-list {
+		.list-item {
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			.status-text {
+				position: absolute;
+				right: -16px;
+				top: -16px;
+				width: 45px;
+				height: 18px;
+				font-size: 8px;
+				color: #ffffff;
+				line-height: 18px;
+				background: #ff3f1e;
+				border-radius: 0px 2px 0px 18px;
+			}
+
+			.pic {
+				margin-right: 12px;
+				width: 72px;
+				height: 72px;
+				border-radius: 3px 3px 3px 3px;
+				background-color: #eee;
+			}
+
+			.info {
+				text-align: left;
+
+				.text {
+					display: flex;
+					align-items: center;
+
+					.title {
+						font-weight: 500;
+						font-size: 16px;
+					}
+
+					.status {
+						display: inline-block;
+						text-align: center;
+						margin-left: 6px;
+						line-height: 14px;
+						width: 26px;
+						height: 14px;
+						font-size: 8px;
+						color: #ffffff;
+						background: #ea9a39;
+						border-radius: 4px;
+					}
+				}
+
+				.date {
+					margin-bottom: 6px;
+					font-size: 12px;
+					color: #666666;
+				}
+			}
+		}
+	}
+}

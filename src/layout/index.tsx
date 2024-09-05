@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Breadcrumb, Button, Layout, Menu } from "@arco-design/web-react";
+import { Breadcrumb, Layout, Menu } from "@arco-design/web-react";
 import {
 	IconBug,
 	IconFile,
@@ -12,7 +12,8 @@ import {
 } from "@arco-design/web-react/icon";
 import { Outlet, useNavigate } from "react-router-dom";
 
-import "./style/layout.modules.less";
+import "./style/index.modules.less";
+import LayoutHeader from "./LayoutHeader";
 
 function PageLayout() {
 	const [collapsed, setCollapsed] = useState(false);
@@ -22,6 +23,10 @@ function PageLayout() {
 		navigate(path);
 	};
 
+	const onCollapsed = () => {
+		setCollapsed(!collapsed)
+	}
+
 	return (
 		<Layout className="layout">
 			<Layout.Sider collapsed={collapsed}>
@@ -29,7 +34,7 @@ function PageLayout() {
 					{/* <div className="logo-bg"></div> */}
 					<h1 className="title"></h1>
 				</div>
-				<Menu onClickMenuItem={navigateRoute}>
+				<Menu defaultOpenKeys={["/"]} onClickMenuItem={navigateRoute}>
 					<Menu.Item key="/">
 						<IconHome />
 						首页
@@ -66,19 +71,11 @@ function PageLayout() {
 			</Layout.Sider>
 			<Layout>
 				<Layout.Header>
-					<Button
-						size="mini"
-						type="primary"
-						onClick={() => setCollapsed(!collapsed)}
-					>
-						展开
-					</Button>
+					<LayoutHeader onClickCollapsed={onCollapsed} collapsed={collapsed} />
 				</Layout.Header>
 				<Layout className="content">
 					<Breadcrumb>
-						<Breadcrumb.Item>Home</Breadcrumb.Item>
-						<Breadcrumb.Item>List</Breadcrumb.Item>
-						<Breadcrumb.Item>App</Breadcrumb.Item>
+						<Breadcrumb.Item>首页</Breadcrumb.Item>
 					</Breadcrumb>
 					<Layout.Content>
 						<Outlet />

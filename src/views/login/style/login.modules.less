@@ -1,14 +1,33 @@
-.container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  font-size: 40px;
-  background-image: url('@/assets/images/bg.png');
-  background-size: 100%;
+.login-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	font-size: 40px;
+	background-image: url("@/assets/images/bg.png");
+	background-size: 100%;
 
-  .login-form {
-    position: absolute;
-    top: 238px;
-    left: 1237px;
-  }
+	.login-form {
+		position: absolute;
+		top: 238px;
+		left: 1237px;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+		background-color: var(--color-bg-1);
+		border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+
+		.wraper {
+			padding: 20px;
+		}
+
+		.welcome {
+			font-size: 24px;
+			color: #333333;
+		}
+
+		.plat-name {
+			margin-bottom: 30px;
+			font-size: 14px;
+			color: #767676;
+		}
+	}
 }
